@@ -4,8 +4,17 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.0.0/modern-normalize.css"
+      integrity="sha512-Zx6MlUMKSVJoQ+83OwhdILe8cSEsCzfqThJd7J/VA2UrK6Ctj85p+xzqfyuNXE5B1k25uUdmJ2OzItbBy9GHAQ=="
+      crossorigin="anonymous"
+    />
     <link rel="stylesheet" href="./css/portfolio.css" />
-    <title>WebStudio</title>
+    <title>portfolio</title>
   </head>
 
   <body>
@@ -47,10 +56,12 @@
     </header>
 
     <main>
-      <ul class="container">
+      <section>
+        <div  class="container">
+        <h2 class="hidden">Портфолио</h2>
+      <ul>
         <!--button-->
         <li>
-          <h1 class="hidden">Портфолио</h1>
           <ul>
             <li>
               <button type="button">Все</button>
@@ -73,10 +84,13 @@
         <li>
           <ul>
             <li>
-              <img src="./img/imgtechno.jpg" alt="Технокряк" />
-              <div class="product"></div>
-              <h3>Технокряк</h3>
-              <span>Веб-сайт</span>
+              <a href="#">
+                  <img src="./img/imgtechno.jpg" alt="Технокряк" />
+                  <div class="product">
+                  <h3>Технокряк</h3>
+                  <span>Веб-сайт</span>
+                  </div>
+              </a>
             </li>
             <li>
               <img
@@ -160,6 +174,8 @@
           </ul>
         </li>
       </ul>
+    </div>
+    </section>
     </main>
     <footer>
       <a class="logo" href="./index.html"

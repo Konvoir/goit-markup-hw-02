@@ -19,7 +19,7 @@
 }
 
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: Roboto;
   background-color: var(--background-interest);
 }
 
@@ -41,7 +41,7 @@ ul {
 }
 
 .logo {
-  font-family: 'Raleway', sans-serif;
+  font-family: raleway;
   font-size: 26px;
   font-style: normal;
   font-weight: 700;
@@ -57,6 +57,7 @@ ul {
   font-weight: 500;
   font-size: 14px;
   line-height: 1.172;
+  color: var(--maintext);
   color: var(--greytext);
 }
 
@@ -64,37 +65,14 @@ ul {
   color: var(--maintext);
 }
 
-/*herro*/
+/*portfolio*/
 
-.herro {
-  max-width: 1200px;
-  max-height: 600px;
-  background-color: var(--background-hero);
-  color: var(--herotext);
-}
-
-.herro h1 {
-  font-weight: 900;
-  line-height: 1.1738;
-  font-size: 44px;
-  font-style: normal;
-}
-
-.request {
-  font-weight: 900;
-  line-height: 1.875;
-  background-color: var(--focus);
-  color: var(--background-button);
-}
-
-/*advantages*/
-
-.advantages {
+.container {
   max-width: 1200px;
 }
 
-.advantages ul {
-  display: flex;
+.hidden {
+  display: none;
 }
 
 .advantages h3 {
