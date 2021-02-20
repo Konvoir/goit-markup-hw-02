@@ -101,8 +101,7 @@ ul {
   font-weight: 700;
   font-size: 14px;
   line-height: 1.172;
-  font-style: normal;
-}
+ }
 
 .advantages p {
   font-weight: 400;
@@ -126,7 +125,6 @@ ul {
 
 .teem h2 {
   font-weight: 700;
-  font-style: normal;
   font-size: 36px;
   line-height: 1.172;
   text-align: center;
@@ -141,8 +139,7 @@ ul {
   font-size: 16px;
   line-height: 1.172;
   text-align: center;
-  font-style: normal;
-}
+  }
 
 .teem p {
   color: var(--greytext);
@@ -167,7 +164,6 @@ ul {
   font-weight: 400;
   font-size: 14px;
   line-height: 1.714;
-  font-style: normal;
   text-decoration: none;
   color: var(--text-adress);
 }

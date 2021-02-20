@@ -5,8 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="preconnect" href="https://fonts.gstatic.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.0.0/modern-normalize.css"
@@ -18,8 +21,8 @@
   </head>
 
   <body>
-    <header class="active">
-      <nav>
+    <header>
+      <nav class="active">
         <a class="logo" href="./index.html"
           >Web<span class="logoS">Studio</span>
         </a>
@@ -47,8 +50,14 @@
           </li>
           <li class="adress">
             <ul>
-              <li><a href="mailto:email@email.com">email@email.com</a></li>
-              <li><a href="tel:+380961111111">+38096111 11 11</a></li>
+              <li>
+                <a class="link" href="mailto:email@email.com"
+                  >email@email.com</a
+                >
+              </li>
+              <li>
+                <a class="link" href="tel:+380961111111">+38096111 11 11</a>
+              </li>
             </ul>
           </li>
         </ul>
@@ -57,135 +66,169 @@
 
     <main>
       <section>
-        <div  class="container">
-        <h2 class="hidden">Портфолио</h2>
-      <ul>
-        <!--button-->
-        <li>
+        <div class="container">
+          <h2 class="hidden">Портфолио</h2>
           <ul>
+            <!--button-->
             <li>
-              <button type="button">Все</button>
+              <ul class="button-menu">
+                <li>
+                  <button type="button">Все</button>
+                </li>
+                <li>
+                  <button type="button">Веб-сайты</button>
+                </li>
+                <li>
+                  <button type="button">Приложения</button>
+                </li>
+                <li>
+                  <button type="button">Дизайн</button>
+                </li>
+                <li>
+                  <button type="button">Маркетинг</button>
+                </li>
+              </ul>
             </li>
-            <li>
-              <button type="button">Веб-сайты</button>
-            </li>
-            <li>
-              <button type="button">Приложения</button>
-            </li>
-            <li>
-              <button type="button">Дизайн</button>
-            </li>
-            <li>
-              <button type="button">Маркетинг</button>
-            </li>
-          </ul>
-        </li>
 
-        <li>
-          <ul>
             <li>
-              <a href="#">
-                  <img src="./img/imgtechno.jpg" alt="Технокряк" />
-                  <div class="product">
-                  <h3>Технокряк</h3>
-                  <span>Веб-сайт</span>
-                  </div>
-              </a>
-            </li>
-            <li>
-              <img
-                src="./img/imgnoborders.jpg"
-                alt="Inspiration has no Borders"
-              />
-              <div class="product">
-                <h3>Inspiration has no Borders</h3>
-                <span>Веб-сайт</span>
-              </div>
-            </li>
-          </ul>
-        </li>
+              <ul class="portf-item">
+                <li>
+                  <a href="#">
+                    <img
+                      width="370"
+                      src="./img/imgtechno.jpg"
+                      alt="Технокряк"
+                    />
+                    <div class="product">
+                      <h3>Технокряк</h3>
+                      <span>Веб-сайт</span>
+                    </div>
+                  </a>
+                </li>
 
-        <li>
-          <a href="#"><h2>Приложения</h2></a>
-          <ul>
-            <li>
-              <img src="./img/imgseafood.jpg" alt="Ресторан Seafood" />
-              <div class="product">
-                <h3>Ресторан Seafood</h3>
-                <span>Приложение</span>
-              </div>
-            </li>
-            <li>
-              <img src="./img/imgboxes.jpg" alt="Проект Boxes" />
-              <div class="product">
-                <h3>Проект Boxes</h3>
-                <span>Приложение</span>
-              </div>
-            </li>
-            <li>
-              <img src="./img/imggBusness.jpg" alt="Growing Business" />
-              <div class="product">
-                <h3>Growing Business</h3>
-                <span>Приложение</span>
-              </div>
-            </li>
-          </ul>
-        </li>
+                <li>
+                  <a href="#">
+                    <img
+                      width="370"
+                      src="./img/imgneworlean.jpg"
+                      alt="Постер
+                    New Orlean vs Golden Star"
+                    />
+                    <div class="product">
+                      <h3>Постер New Orlean vs Golden Star</h3>
+                      <span>Дизайн</span>
+                    </div>
+                  </a>
+                </li>
 
-        <li>
-          <a href="#"><h2>Дизайн</h2></a>
-          <ul>
-            <li>
-              <img
-                src="./img/imgneworlean.jpg"
-                alt="Постер New Orlean vs Golden Star"
-              />
-              <div class="product">
-                <h3>Постер New Orlean vs Golden Star</h3>
-                <span>Дизайн</span>
-              </div>
-            </li>
-            <li>
-              <img src="./img/imglimit.jpg" alt="Издание Limited Edition" />
-              <div class="product">
-                <h3>Издание Limited Edition</h3>
-                <span>Дизайн</span>
-              </div>
+                <li>
+                  <a href="#">
+                    <img
+                      width="370"
+                      src="./img/imgseafood.jpg"
+                      alt="Inspiration has no Borders"
+                    />
+                    <div class="product">
+                      <h3>Ресторан Seafood</h3>
+                      <span>Приложение</span>
+                    </div>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#">
+                    <img
+                      width="370"
+                      src="./img/imgprime.jpg"
+                      alt="Проект Prime"
+                    />
+                    <div class="product">
+                      <h3>Проект Prime</h3>
+                      <span>Маркетинг</span>
+                    </div>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#">
+                    <img
+                      width="370"
+                      src="./img/imgboxes.jpg"
+                      alt="Проект Boxes"
+                    />
+                    <div class="product">
+                      <h3>Проект Boxes</h3>
+                      <span>Приложение</span>
+                    </div>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#">
+                    <img
+                      width="370"
+                      src="./img/imgnoborders.jpg"
+                      alt="Inspiration has no Borders"
+                    />
+                    <div class="product">
+                      <h3>Inspiration has no Borders</h3>
+                      <span>Веб-сайт</span>
+                    </div>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#">
+                    <img
+                      width="370"
+                      src="./img/imglimit.jpg"
+                      alt="Издание Limited Edition"
+                    />
+                    <div class="product">
+                      <h3>Издание Limited Edition</h3>
+                      <span>Дизайн</span>
+                    </div>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#">
+                    <img width="370" src="./img/imglab.jpg" alt="Проект LAB" />
+                    <div class="product">
+                      <h3>Проект LAB</h3>
+                      <span>Маркетинг</span>
+                    </div>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#">
+                    <img
+                      width="370"
+                      src="./img/imggBusness.jpg"
+                      alt="Growing Business"
+                    />
+                    <div class="product">
+                      <h3>Growing Business</h3>
+                      <span>Приложение</span>
+                    </div>
+                  </a>
+                </li>
+              </ul>
             </li>
           </ul>
-        </li>
-        <li>
-          <a href="#"><h2>Маркетинг</h2></a>
-          <ul>
-            <li>
-              <img src="./img/imgprime.jpg" alt="Проект Prime" />
-              <div class="product">
-                <h3>Проект Prime</h3>
-                <span>Маркетинг</span>
-              </div>
-            </li>
-            <li>
-              <img src="./img/imglab.jpg" alt="Проект LAB" />
-              <div class="product">
-                <h3>Проект LAB</h3>
-                <span>Маркетинг</span>
-              </div>
-            </li>
-          </ul>
-        </li>
-      </ul>
-    </div>
-    </section>
+        </div>
+      </section>
     </main>
     <footer>
-      <a class="logo" href="./index.html"
-        >Web<span class="logo-S">Studio</span></a
-      >
-      <address>
-        г. Киев, пр-т Леси Украинки, 26 <br />
-        info@example.com <br />
-        +38 099 111 11 11
-      </address>
+      <div class="foot-conteiner">
+        <a class="logo" href="#hero">Web<span class="logo-S">Studio</span></a>
+        <address class="contact">
+          <span class="contact"> г. Киев, пр-т Леси Украинки, 26</span>
+          <a class="contact" href="mailto:email@email.com">email@email.com</a>
+          <a class="contact" href="tel:+380961111111">+38096111 11 11</a>
+        </address>
+      </div>
     </footer>
   </body>
 </html>
