@@ -18,7 +18,8 @@
 }
 
 body {
-  font-family: Roboto;
+  font-family: 'Roboto', sans-serif;
+  color: var(--maintext);
 }
 
 a {
@@ -35,11 +36,10 @@ ul {
   font-weight: 500;
   display: flex;
   line-height: 1.172;
-  color: #212121;
 }
 
 .logo {
-  font-family: raleway;
+  font-family: 'Raleway', sans-serif;
   font-size: 26px;
   font-style: normal;
   font-weight: 700;
@@ -93,7 +93,6 @@ ul {
 }
 
 .product h3 {
-  color: var(--maintext);
   font-weight: 700;
   font-size: 18px;
   line-height: 1.172;

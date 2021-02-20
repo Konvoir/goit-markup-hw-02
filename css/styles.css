@@ -20,7 +20,7 @@
 
 body {
   font-family: 'Roboto', sans-serif;
-  background-color: var(--background-interest);
+  color: var(--maintext);
 }
 
 a {
@@ -101,7 +101,7 @@ ul {
   font-weight: 700;
   font-size: 14px;
   line-height: 1.172;
- }
+}
 
 .advantages p {
   font-weight: 400;
@@ -139,7 +139,7 @@ ul {
   font-size: 16px;
   line-height: 1.172;
   text-align: center;
-  }
+}
 
 .teem p {
   color: var(--greytext);
