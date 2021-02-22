@@ -97,13 +97,14 @@ ul {
 .product h3 {
   font-weight: 700;
   font-size: 18px;
-  line-height: 1.172;
+  line-height: 2;
+  color: var(--maintext);
 }
 
 .product span {
   font-weight: 400;
   font-size: 16px;
-  line-height: 2;
+  line-height: 1, 85;
   color: var(--greytext);
 }
 
