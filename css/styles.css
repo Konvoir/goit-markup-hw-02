@@ -203,8 +203,3 @@ a.contact {
   color: var(--greytext);
   display: block;
 }
-
-a.link:focus,
-a.link:hover {
-  color: var(--focus);
-}
