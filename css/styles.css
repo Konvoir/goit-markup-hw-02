@@ -48,9 +48,14 @@ ul {
   line-height: 1.1738;
   color: var(--logo);
 }
-
 .logoS {
   color: var(--maintext);
+}
+
+/* Hower */
+.link :hover,
+.link :focus {
+  color: var(--focus);
 }
 
 .link {

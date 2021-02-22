@@ -56,14 +56,16 @@ ul {
   font-size: 14px;
   line-height: 1.172;
   color: var(--maintext);
-  color: var(--greytext);
 }
 
 .pages .link {
   color: var(--maintext);
 }
 
-.main-nav {
+/* Hower */
+.link :hover,
+.link :focus {
+  color: var(--focus);
 }
 
 /*portfolio*/
