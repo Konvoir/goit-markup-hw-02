@@ -62,6 +62,12 @@ ul {
   color: var(--maintext);
 }
 
+.main-hed,
+.pages ul,
+.adress {
+  display: inline-flex;
+}
+
 /* Hower */
 .link :hover,
 .link :focus {
