@@ -76,8 +76,8 @@ ul {
 }
 
 /* Hower */
-.link :hover,
-.link :focus {
+a.link:focus,
+a.link:hover {
   color: var(--focus);
 }
 
@@ -143,4 +143,8 @@ button.button {
   font-style: normal;
   text-decoration: none;
   color: var(--text-adress);
+}
+a.contact {
+  color: var(--greytext);
+  display: block;
 }

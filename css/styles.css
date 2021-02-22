@@ -36,6 +36,7 @@ ul {
 .main-hed {
   height: 80px;
   width: 1200px;
+  margin: 0;
   justify-content: center;
   align-items: center;
 }
@@ -47,6 +48,10 @@ ul {
   color: #212121;
 }
 
+.pages {
+  display: flex;
+}
+
 .logo {
   font-family: 'Raleway', sans-serif;
   font-size: 26px;
@@ -55,32 +60,35 @@ ul {
   line-height: 1.1738;
   color: var(--logo);
 }
+
 .logoS {
   color: var(--maintext);
-}
-
-/* Hower */
-.link :hover,
-.link :focus {
-  color: var(--focus);
 }
 
 .link {
   font-weight: 500;
   font-size: 14px;
   line-height: 1.172;
+  color: inherit;
+}
+
+.adress a {
   color: var(--greytext);
 }
 
-.pages .link {
-  color: var(--maintext);
+/* Hower */
+
+a.link:focus,
+a.link:hover {
+  color: var(--focus);
 }
 
 .main-hed,
-.pages ul,
+.pages,
 .adress {
-  display: inline-flex;
+  display: flex;
 }
+
 /*herro*/
 
 .herro {
@@ -194,4 +202,9 @@ ul {
 a.contact {
   color: var(--greytext);
   display: block;
+}
+
+a.link:focus,
+a.link:hover {
+  color: var(--focus);
 }
