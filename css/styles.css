@@ -97,6 +97,7 @@ ul {
   line-height: 1.1738;
   font-size: 44px;
   font-style: normal;
+  text-transform: uppercase;
 }
 
 .request {
@@ -121,12 +122,13 @@ ul {
   font-weight: 700;
   font-size: 14px;
   line-height: 1.172;
+  text-transform: uppercase;
 }
 
 .advantages p {
   font-weight: 400;
   font-size: 14px;
-  line-height: 1.172;
+  line-height: 1.712;
   color: var(--greytext);
 }
 
@@ -185,5 +187,11 @@ ul {
   font-size: 14px;
   line-height: 1.714;
   text-decoration: none;
-  color: var(--text-adress);
+  color: var(--herotext);
+  font-style: normal;
+}
+
+a.contact {
+  color: var(--greytext);
+  display: block;
 }

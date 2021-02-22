@@ -102,8 +102,9 @@ ul {
   color: var(--maintext);
 }
 
-.button {
+button.button {
   cursor: pointer;
+  font-weight: 500;
 }
 
 .portf-item {
