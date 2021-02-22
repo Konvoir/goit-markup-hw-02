@@ -33,6 +33,12 @@ ul {
 
 /*header*/
 
+.main-hed {
+  height: 80px;
+  justify-content: center;
+  align-items: center;
+}
+
 .active {
   font-weight: 500;
   display: flex;
@@ -93,6 +99,7 @@ ul {
 }
 
 .request {
+  cursor: pointer;
   font-weight: 900;
   line-height: 1.875;
   background-color: var(--focus);
