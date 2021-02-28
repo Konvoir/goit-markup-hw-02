@@ -167,6 +167,13 @@ button.button {
   font-weight: 500;
 }
 
+.button:hover,
+.button:focus,
+.button:active {
+  color: var(--background-main);
+  background-color: var(--focus);
+}
+
 .portf-list {
   flex-wrap: wrap;
 }
