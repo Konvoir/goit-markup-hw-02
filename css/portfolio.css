@@ -1,12 +1,13 @@
 :root {
-  --logo: #2196f3;
   --maintext: #212121;
   --greytext: #757575;
   --focus: #2196f3;
   --herotext: #ffffff;
+  --background-main: #ffffff;
   --background-hero: #2f303a;
   --text-adress: rgba(255, 255, 255, 0.6);
-  --background-button: #f5f4fa;
+  --background-second: #f5f4fa;
+  --background-interest: #e5e5e5;
 }
 
 *,
@@ -18,8 +19,10 @@
 }
 
 body {
+  /* padding-top: 80px; */
   font-family: 'Roboto', sans-serif;
   color: var(--maintext);
+  background-color: var(--background-main);
 }
 
 a {
@@ -30,28 +33,40 @@ ul {
   list-style: none;
 }
 
+.ctn {
+  outline: 1px solid coral;
+  width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
 /*header*/
 
-.main-hed {
-  height: 80px;
-  width: 1200px;
-  justify-content: center;
-  align-items: center;
+.header {
+  position: sticky;
+  top: 0;
+  min-height: 80px;
+  outline: #2f303a 1px solid;
+  padding: 24 215px;
+  border-bottom: 1px solid #ececec;
 }
 
-.active {
+.nav {
   font-weight: 500;
-  display: flex;
   line-height: 1.172;
+  color: var(--maintext);
+  vertical-align: middle;
 }
 
 .logo {
+  display: inline-block;
   font-family: 'Raleway', sans-serif;
   font-size: 26px;
   font-style: normal;
   font-weight: 700;
   line-height: 1.1738;
-  color: var(--logo);
+  color: var(--focus);
+  padding-top: 24px;
+  padding-bottom: 25px;
 }
 
 .logoS {
@@ -62,23 +77,40 @@ ul {
   font-weight: 500;
   font-size: 14px;
   line-height: 1.172;
-  color: var(--maintext);
+  color: inherit;
 }
 
-.pages .link {
-  color: var(--maintext);
+.nav-item:not(:first-child) {
+  margin-left: 50px;
 }
 
-.main-hed,
-.pages ul,
-.adress {
-  display: inline-flex;
+/* adress */
+
+.adress a {
+  color: var(--greytext);
+}
+
+.adress .link:last-child {
+  margin-left: 50px;
 }
 
 /* Hower */
+
 a.link:focus,
 a.link:hover {
   color: var(--focus);
+}
+
+.header,
+.nav,
+.nav-list,
+.box,
+.features-list,
+.teem-list,
+.adress {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 /*portfolio*/
@@ -127,8 +159,8 @@ button.button {
 
 /*footer*/
 
-.foot-conteiner {
-  max-width: 1200px;
+.foot {
+  padding: 60px 15px;
   background-color: var(--background-hero);
 }
 
@@ -140,12 +172,38 @@ button.button {
   font-weight: 400;
   font-size: 14px;
   line-height: 1.714;
-  font-style: normal;
   text-decoration: none;
-  color: var(--text-adress);
+  color: var(--herotext);
+  font-style: normal;
 }
 
 a.contact {
   color: var(--greytext);
   display: block;
+}
+
+.nav-list::after {
+  content: '';
+  position: absolute;
+  /* buttom 0; */
+  left: 0;
+  width: 100%;
+  background-color: var(--focus);
+  height: 5px;
+  opacity: 0;
+}
+
+/* h2 - section title */
+
+.title {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.16;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+.bottom {
+  padding: 0;
 }
