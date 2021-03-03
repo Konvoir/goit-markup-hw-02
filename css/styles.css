@@ -53,7 +53,6 @@ ul {
   position: sticky;
   top: 0;
   min-height: 80px;
-  outline: #2f303a 1px solid;
   padding: 24 215px;
   border-bottom: 1px solid #ececec;
   background-color: var(--background-main);
@@ -242,6 +241,10 @@ a.link:hover {
   text-align: center;
 }
 
+.box {
+  margin-top: 50px;
+}
+
 .box img {
   display: block;
 }
@@ -302,7 +305,7 @@ a.link:hover {
 /*footer*/
 
 .foot {
-  padding: 60px 15px;
+  padding: 60px;
   background-color: var(--background-hero);
 }
 
