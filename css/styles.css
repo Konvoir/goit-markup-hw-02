@@ -4,10 +4,13 @@
   --focus: #2196f3;
   --herotext: #ffffff;
   --background-main: #ffffff;
+  --background-thumb: rgba(33, 150, 243, 0.9);
   --background-hero: #2f303a;
   --text-adress: rgba(255, 255, 255, 0.6);
   --background-second: #f5f4fa;
   --background-interest: #e5e5e5;
+  --bazier: cubic-bezier(0.4, 0, 0.2, 1);
+  --card-set-gap: 30px;
 }
 
 *,
@@ -34,11 +37,17 @@ ul {
 }
 
 .ctn {
-  outline: 1px solid coral;
+  /* outline: 1px solid coral; */
   width: 1200px;
   margin: 0 auto;
   padding: 0 15px;
 }
+
+.no-gap {
+  display: block;
+  max-width: 100%;
+}
+
 /*header*/
 
 .header {
@@ -46,25 +55,33 @@ ul {
   top: 0;
   min-height: 80px;
   outline: #2f303a 1px solid;
-  /* width: 1200px; */
   padding: 24 215px;
   border-bottom: 1px solid #ececec;
+  background-color: var(--background-main);
+  z-index: 1;
 }
 
 .nav {
   font-weight: 500;
-  /* padding: 0 200px; */
   align-items: center;
-  /* display: flex; */
   line-height: 1.172;
   color: var(--maintext);
   vertical-align: middle;
   justify-content: space-between;
 }
-/* 
-.header > .ctn {
-  padding: 0 215px;
-} */
+
+.nav-list {
+  margin-left: 93px;
+}
+
+.nav-item:not(:first-child) {
+  margin-left: 50px;
+}
+
+/* padding: 0 200px; */
+/* display: flex; */
+/* .header > .ctn {
+  padding: 0 215px;} */
 
 .logo {
   display: inline-block;
@@ -89,18 +106,18 @@ ul {
   color: inherit;
 }
 
-.nav-item:not(:first-child) {
-  margin-left: 50px;
+/* contact */
+
+.contact {
+  margin-left: auto;
 }
 
-/* adress */
-
-.adress a {
+.contact a {
   color: var(--greytext);
 }
 
-.adress .link:last-child {
-  margin-left: 50px;
+.contact li:last-child {
+  margin-left: 30px;
 }
 
 /* Hower */
@@ -116,7 +133,7 @@ a.link:hover {
 .box,
 .features-list,
 .teem-list,
-.adress {
+.contact {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -133,9 +150,10 @@ a.link:hover {
   background-repeat: no-repeat;
   background-size: cover;
   text-align: center;
-  /* align-items: center;
-  justify-content: space-between; */
 }
+
+/* align-items: center;
+  justify-content: space-between; */
 
 .herro h1 {
   color: var(--herotext);
@@ -161,6 +179,8 @@ a.link:hover {
   color: var(--background-second);
   width: 200px;
   height: 50px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border: 1px solid transparent;
 }
 
 .herro-button:focus,
@@ -170,6 +190,10 @@ a.link:hover {
 }
 
 /*features*/
+
+.features {
+  padding: 94px 0;
+}
 
 .visually-hidden {
   position: absolute;
@@ -182,10 +206,6 @@ a.link:hover {
   clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
-}
-
-.features {
-  padding: 94px 0;
 }
 
 .features-item:not(:last-of-type) {
@@ -221,6 +241,10 @@ a.link:hover {
   font-size: 36px;
   line-height: 1.172;
   text-align: center;
+}
+
+.box img {
+  display: block;
 }
 
 /*teem*/
@@ -259,6 +283,12 @@ a.link:hover {
   text-align: center;
 }
 
+.teem-item {
+  box-shadow: 0px 1px 3px rgb(0 0 0 / 12%), 0px 1px 1px rgb(0 0 0 / 12%),
+    0px 2px 1px rgb(0 0 0 / 22%);
+  border-radius: 0px 0px 4px 4px;
+}
+
 .client ul {
   display: flex;
 }
@@ -267,7 +297,6 @@ a.link:hover {
 
 .foot {
   padding: 60px 15px;
-  max-width: 1200px;
   background-color: var(--background-hero);
 }
 
@@ -275,7 +304,7 @@ a.link:hover {
   color: var(--herotext);
 }
 
-.contact {
+.adress {
   font-weight: 400;
   font-size: 14px;
   line-height: 1.714;
@@ -284,9 +313,10 @@ a.link:hover {
   font-style: normal;
 }
 
-a.contact {
+a.adress {
   color: var(--greytext);
   display: block;
+  margin-top: 9px;
 }
 
 .nav-list::after {
@@ -313,4 +343,13 @@ a.contact {
 
 .bottom {
   padding: 0;
+  margin-bottom: 20px;
 }
+
+/* section {
+  outline: rebeccapurple 1px dashed;
+}
+
+li {
+  outline: royalblue 1px dashed;
+} */

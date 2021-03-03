@@ -5,9 +5,12 @@
   --herotext: #ffffff;
   --background-main: #ffffff;
   --background-hero: #2f303a;
+  --background-thumb: rgba(33, 150, 243, 0.9);
   --text-adress: rgba(255, 255, 255, 0.6);
   --background-second: #f5f4fa;
   --background-interest: #e5e5e5;
+  --bazier: cubic-bezier(0.4, 0, 0.2, 1);
+  --card-set-gap: 30px;
 }
 
 *,
@@ -18,9 +21,13 @@
   padding: 0;
 }
 
-body {
-  /* padding-top: 80px; */
+.no-gap {
+  display: block;
+  max-width: 100%;
+}
+/* body {padding-top: 80px;} */
 
+body {
   font-family: 'Roboto', sans-serif;
   color: var(--maintext);
   background-color: var(--background-main);
@@ -35,7 +42,7 @@ ul {
 }
 
 .ctn {
-  outline: 1px solid coral;
+  /* outline: 1px solid coral; */
   width: 1200px;
   margin: 0 auto;
   padding: 0 15px;
@@ -50,14 +57,31 @@ ul {
   outline: #2f303a 1px solid;
   padding: 24 215px;
   border-bottom: 1px solid #ececec;
+  background-color: var(--background-main);
+  z-index: 1;
 }
 
 .nav {
   font-weight: 500;
+  align-items: center;
   line-height: 1.172;
   color: var(--maintext);
   vertical-align: middle;
+  justify-content: space-between;
 }
+
+.nav-list {
+  margin-left: 93px;
+}
+
+.nav-item:not(:first-child) {
+  margin-left: 50px;
+}
+
+/* padding: 0 200px; */
+/* display: flex; */
+/* .header > .ctn {
+  padding: 0 215px;} */
 
 .logo {
   display: inline-block;
@@ -82,18 +106,18 @@ ul {
   color: inherit;
 }
 
-.nav-item:not(:first-child) {
-  margin-left: 50px;
+/* contact */
+
+.contact {
+  margin-left: auto;
 }
 
-/* adress */
-
-.adress a {
+.contact a {
   color: var(--greytext);
 }
 
-.adress .link:last-child {
-  margin-left: 50px;
+.contact li:last-child {
+  margin-left: 30px;
 }
 
 /* Hower */
@@ -107,9 +131,8 @@ a.link:hover {
 .nav,
 .nav-list,
 .box,
-.portf-list,
-/* .button-menu, */
-.adress {
+.features-list,
+.contact {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -145,7 +168,7 @@ a.link:hover {
   margin-bottom: 34px;
 }
 
-.button-menu > li:not(last-of-type) {
+.button-menu li:not(last-of-type) {
   margin-right: 8px;
 }
 
@@ -160,11 +183,9 @@ a.link:hover {
   border: 1px solid transparent;
   padding: 6px 22px;
   border-radius: 4px;
-}
-
-button.button {
+  transition: color 250ms var(--bazier), background-color 250ms var(--bazier),
+    box-shadow 250ms var(--bazier);
   cursor: pointer;
-  font-weight: 500;
 }
 
 .button:hover,
@@ -172,20 +193,41 @@ button.button {
 .button:active {
   color: var(--background-main);
   background-color: var(--focus);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
+  outline: none;
 }
 
-.portf-list {
+.examples {
+  display: flex;
   flex-wrap: wrap;
+  margin-left: calc(-1 * var(--card-set-gap));
+  margin-top: calc(-1 * var(--card-set-gap));
+}
+
+.exampl-el {
+  max-width: 370px;
+  flex-basis: calc(100% / 3 - var(--card-set-gap));
+  margin-left: var(--card-set-gap);
+  margin-top: var(--card-set-gap);
+}
+
+.example-link {
+  display: block;
+  transition: box-shadow 250ms var(--bazier);
 }
 
 .product {
   padding: 20px 24px;
+  border: 1px solid #eeeeee;
+  border-top: none;
 }
 
 .product h3 {
   font-weight: 700;
   font-size: 18px;
   line-height: 2;
+  letter-spacing: 0.06em;
   color: var(--maintext);
 }
 
@@ -195,6 +237,7 @@ button.button {
   font-size: 16px;
   line-height: 1, 85;
   color: var(--greytext);
+  letter-spacing: 0.06em;
 }
 
 /*footer*/
@@ -208,7 +251,7 @@ button.button {
   color: var(--herotext);
 }
 
-.contact {
+.adress {
   font-weight: 400;
   font-size: 14px;
   line-height: 1.714;
@@ -217,14 +260,16 @@ button.button {
   font-style: normal;
 }
 
-a.contact {
+a.adress {
   color: var(--greytext);
   display: block;
+  margin-top: 9px;
 }
 
 .nav-list::after {
   content: '';
   position: absolute;
+  /* buttom 0; */
   left: 0;
   width: 100%;
   background-color: var(--focus);
@@ -245,4 +290,46 @@ a.contact {
 
 .bottom {
   padding: 0;
+  margin-bottom: 20px;
 }
+
+.thumb {
+  position: relative;
+  overflow: hidden;
+}
+
+.overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+
+  transform: translateY(100%);
+
+  width: 100%;
+  height: 100%;
+  background-color: rgba(33, 150, 243, 0.9);
+
+  transition: transform 250ms var(--bazier);
+}
+
+.example-link:hover .overlay,
+.example-link:focus .overlay {
+  transform: translateY(0);
+}
+
+.overlay-text {
+  margin: 0;
+  padding: 63px 20px;
+
+  color: var(--background-main);
+  font-size: 18px;
+  line-height: 1.56;
+}
+
+/* section {
+  outline: rebeccapurple 1px dashed;
+}
+
+li {
+  outline: royalblue 1px dashed;
+} */
